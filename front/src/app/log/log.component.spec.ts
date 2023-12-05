@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CiaoComponent } from './ciao.component';
+import { LogComponent } from './log.component';
 
-describe('CiaoComponent', () => {
-  let component: CiaoComponent;
-  let fixture: ComponentFixture<CiaoComponent>;
+describe('LogComponent', () => {
+  let component: LogComponent;
+  let fixture: ComponentFixture<LogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CiaoComponent]
+      imports: [LogComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CiaoComponent);
+    fixture = TestBed.createComponent(LogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
