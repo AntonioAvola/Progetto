@@ -2,7 +2,8 @@ const Spot      = require('../models/Spot')
 
 /**
  * Metodo di ricerca di tutti gli spot inerenti ad un posto in 
- * particolare, che sia una città o una struttura
+ * particolare, che sia una città o una struttura;
+ * senza paginazione
  */
 const ricerca = (req, res, next) => {
     let posto = req.body.posto.toString

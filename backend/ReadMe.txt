@@ -5,4 +5,9 @@
 4. Funzione di ricerca spot secondo una parola chiave
 5. Funzione di visualizzazione spot scelto dall'utente
 
+2023.12.11
+6. Creazione route ricerva spot
+7. Creazione route visualizzazione spot specifico
+
+
 
