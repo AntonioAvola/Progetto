@@ -3,17 +3,20 @@ const Schema        = mongoose.Schema
 const user          = require('./User')
 
 const spotSchema = new Schema({
-    autore: {
+    author: {
         username: user.username
     },
-    titolo: {
+    title: {
         type: String
     },
-    corpo: [{
-        nomeStruttura: {
+    generalDescription: {
+        type: String
+    },
+    body: [{
+        structureName: {
             type: String
         },
-        descrizione: {
+        description: {
             type: String
         }
     }],
@@ -25,7 +28,7 @@ const spotSchema = new Schema({
             type: Number
         }
     },
-    foto: {
+    photo: {
         type: String
     }
 })

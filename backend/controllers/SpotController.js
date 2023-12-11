@@ -5,9 +5,9 @@ const Spot      = require('../models/Spot')
  * particolare, che sia una città o una struttura;
  * senza paginazione
  */
-const ricerca = (req, res, next) => {
-    let posto = req.body.posto.toString
-    Spot.find({ $or: [{titolo: posto}, {nomeStruttura: posto}] })
+const search = (req, res, next) => {
+    let place = req.body.place.toString
+    Spot.find({ $or: [{title: place}, {structureName: place}] })
     .then(response => {
         res.json({
             response
@@ -23,10 +23,10 @@ const ricerca = (req, res, next) => {
 /**
  * Metodo di visualizzazione del singolo spot
  */
-const visualizza = (req, res, next) => {
-    let autore = req.body.autore
-    let titolo = req.body.titolo
-    Spot.find({ $and: [{autore}, {titolo}] })
+const showSingle = (req, res, next) => {
+    let autore = req.body.author
+    let titolo = req.body.title
+    Spot.find({ $and: [{author}, {title}] })
     .then(response => {
         res.json({
             response
@@ -40,5 +40,5 @@ const visualizza = (req, res, next) => {
 }
 
 module.exports = {
-    ricerca, visualizza
+    search, showSingle
 }
